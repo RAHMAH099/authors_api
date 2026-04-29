@@ -3,7 +3,7 @@ from datetime import datetime
 
 class Book(db.Model):
     __tablename__ = 'books' # customize the table name
-    id = db.Column(db.Integer, primary = True)    # ids are automatically incrimated
+    id = db.Column(db.Integer, primary_key = True)    # ids are automatically incrimated
     title =  db.Column(db.String(150), nullable =  False)
     pages =  db.Column(db.Integer, nullable = False)
     price =  db.Column(db.Integer, nullable = False)

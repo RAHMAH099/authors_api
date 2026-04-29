@@ -11,6 +11,12 @@ def create_app():  # we define our app instance in this function
     db.init_app(app)
     migrate.init_app(app,db)
 
+
+     # Importing and registering models
+    from app.models.users import User
+    from app.models.companies import Company
+    from app.models.books import Book
+
     @app.route('/')
     def home():
         return "Authors API Project setup"

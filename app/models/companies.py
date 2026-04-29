@@ -3,7 +3,7 @@ from datetime import datetime
 
 class Company(db.Model):
     __tablename__ = 'companies' # customize the table name
-    id = db.Column(db.Integer, primary = True)    # ids are automatically incrimated
+    id = db.Column(db.Integer, primary_key = True)    # ids are automatically incrimated
     name =  db.Column(db.String(100), unique = True )
     origin =  db.Column(db.String(100), nullable = False)
     description =  db.Column(db.Text(100), nullable = False)
